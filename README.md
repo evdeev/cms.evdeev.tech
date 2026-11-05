@@ -31,3 +31,13 @@ Keystatic работает в `github` mode: изменения сохраняю
 npm run check
 npm run build
 ```
+
+GitHub Actions автоматически выполняет `npm ci` и `npm run build` для каждого
+коммита в `main` и каждого pull request.
+
+## Деплой
+
+Keystatic использует серверные API-маршруты и не может работать на GitHub Pages.
+Для публикации CMS нужен хостинг с поддержкой Node.js. На хостинг также необходимо
+передать переменные окружения из локального `.env`, а домен `cms.evdeev.tech`
+направить на этот хостинг.
